@@ -9,7 +9,8 @@
     "build": "tsc -b && vite build",
     "format": "npx @biomejs/biome format --write ./",
     "lint": "npx @biomejs/biome lint --write ./",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate": "openapi --input ./src/openapi/swagger.yaml --output ./src/api"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -21,6 +22,7 @@
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.19",
+    "openapi-typescript-codegen": "^0.29.0",
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.2.2",
