@@ -1,9 +1,10 @@
 // src/pages/UsersPage.tsx
 import React, { useState } from 'react';
 import { DefaultService } from '../api'; // OpenAPI Codegen으로 생성된 기본 서비스 객체
+import { UserList } from '../schemas/user';
 
 const UsersPage: React.FC = () => {
-  const [users, setUsers] = useState<{ id: number; name: string }[]>([]);
+  const [users, setUsers] = useState<UserList>([]);
   const [error, setError] = useState<string | null>(null);
 
   // Fetch all users
